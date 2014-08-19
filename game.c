@@ -1,8 +1,9 @@
 #include "game.h"
 
+int quit = 0;
+
 void gameLoop() {
 	SDL_Event e;
-	int quit = 0;
 
 	while (quit == 0) {
 		while (SDL_PollEvent(&e) != 0) {
@@ -22,6 +23,10 @@ void gameLoop() {
 
 		eventDraw();
 	}
+}
+
+void quitGame() {
+	quit = 1;
 }
 
 SDL_Surface* loadBMP(const char *path) {

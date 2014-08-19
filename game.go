@@ -49,3 +49,7 @@ func LaunchGame(title string, width, height int) error {
 
 	return nil
 }
+
+func QuitGame() {
+	C.quitGame()
+}

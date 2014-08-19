@@ -2,4 +2,6 @@
 
 void gameLoop();
 
+void quitGame();
+
 SDL_Surface* loadBMP(const char *path);
