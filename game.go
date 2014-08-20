@@ -1,4 +1,4 @@
-package sdl2
+package zero
 
 // #cgo CFLAGS: -Wno-implicit-function-declaration
 // #cgo LDFLAGS: -framework SDL2

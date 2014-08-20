@@ -1,10 +1,10 @@
-# sdl2
+# zero
 
-sdl2 is a game framework for Go based on [SDL 2](https://www.libsdl.org).  It is an experimental project that should not be used in production applications.  Currently, only Mac OS X is supported.  That being said, both Go and SDL are cross-platform, so with the right cgo directives, it could probably run on other systems.
+zero is a game framework for Go based on [SDL 2](https://www.libsdl.org).  It is an experimental project that should not be used in production applications.  Currently, only Mac OS X is supported.  That being said, both Go and SDL are cross-platform, so with the right cgo directives, it could probably run on other systems.
 
 ## Dependencies
 
-sdl2 requires SDL 2 to be installed on the system.
+zero requires SDL 2 to be installed on the system.
 
 ## License
 

@@ -1,4 +1,4 @@
-package sdl2
+package zero
 
 // #include <SDL2/SDL.h>
 import "C"
