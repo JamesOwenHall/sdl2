@@ -2,6 +2,15 @@
 
 int quit = 0;
 
+int initIMG() {
+	int imgFlags = IMG_INIT_PNG;
+	if (!(IMG_Init(imgFlags) & imgFlags)) {
+		return 0;
+	}
+
+	return 1;
+}
+
 void gameLoop() {
 	SDL_Event e;
 
@@ -27,8 +36,4 @@ void gameLoop() {
 
 void quitGame() {
 	quit = 1;
-}
-
-SDL_Surface* loadBMP(const char *path) {
-	return SDL_LoadBMP(path);
 }

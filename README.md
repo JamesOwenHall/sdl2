@@ -4,7 +4,7 @@ zero is a game framework for Go based on [SDL 2](https://www.libsdl.org).  It is
 
 ## Dependencies
 
-zero requires SDL 2 to be installed on the system.
+zero requires [SDL 2](https://libsdl.org) and [SDL Image](https://www.libsdl.org/projects/SDL_image/) to be installed on the system.
 
 ## License
 

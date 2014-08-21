@@ -19,10 +19,10 @@ func init() {
 	Textures = make(map[string]Texture)
 }
 
-func LoadBMP(path, name string) error {
+func LoadPNG(path, name string) error {
 	// Make sure this name isn't already in use
 	if _, ok := Textures[name]; ok {
-		return errors.New("Texture with name " + name + " already in use")
+		return errors.New("Texture name already in use")
 	}
 
 	// Convert the path to a c-string
@@ -30,7 +30,7 @@ func LoadBMP(path, name string) error {
 	defer C.free(unsafe.Pointer(cpath))
 
 	// Load the surface
-	surface := C.loadBMP(cpath)
+	surface := C.IMG_Load(cpath)
 	if surface == nil {
 		return errors.New("SDL_LoadBMP")
 	}

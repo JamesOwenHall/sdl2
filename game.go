@@ -1,7 +1,7 @@
 package zero
 
 // #cgo CFLAGS: -Wno-implicit-function-declaration
-// #cgo LDFLAGS: -framework SDL2
+// #cgo LDFLAGS: -framework SDL2 -framework SDL2_image
 // #include <stdlib.h>
 // #include <SDL2/SDL.h>
 // #include "game.h"
@@ -40,6 +40,11 @@ func LaunchGame(title string, width, height int) error {
 		return errors.New("SDL_CreateRenderer")
 	}
 	defer C.SDL_DestroyRenderer(renderer)
+
+	// Initialize image support
+	if success := int(C.initIMG()); success == 0 {
+		return errors.New("IMG_Init")
+	}
 
 	EventInit()
 
