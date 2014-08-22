@@ -50,6 +50,15 @@ const (
 	K_Left  = C.SDLK_LEFT
 	K_Down  = C.SDLK_DOWN
 	K_Up    = C.SDLK_UP
+
+	// Common keys
+	K_Backspace = C.SDLK_BACKSPACE
+	K_Escape    = C.SDLK_ESCAPE
+	K_LShift    = C.SDLK_LSHIFT
+	K_Return    = C.SDLK_RETURN
+	K_RShift    = C.SDLK_RSHIFT
+	K_Space     = C.SDLK_SPACE
+	K_Tab       = C.SDLK_TAB
 )
 
 //export eventQuit
